@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SBA Bali Solstice Retreat 2026 - Itinerary</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --deep-forest: #1E3329;
+    --forest-green: #2D4A3E;
+    --terracotta: #C4663A;
+    --terracotta-dark: #A8522B;
+    --warm-gold: #C9A96E;
+    --warm-cream: #F5EDE0;
+    --light-cream: #FEFCF9;
+    --off-white: #FAF6F1;
+    --charcoal: #2C2C2C;
+    --terracotta-light: rgba(196, 102, 58, 0.15);
+  }
+
+  body {
+    font-family: 'Lora', Georgia, serif;
+    color: var(--charcoal);
+    background: var(--light-cream);
+    line-height: 1.8;
+    font-size: 16px;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 500;
+  }
+
+  /* HERO SECTION */
+  .hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero video {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(
+      to bottom,
+      rgba(30, 51, 41, 0.3) 0%,
+      rgba(30, 51, 41, 0.6) 50%,
+      rgba(30, 51, 41, 0.85) 100%
+    );
+    z-index: 2;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: var(--warm-cream);
+    padding: 0 24px;
+  }
+
+  .hero-brand {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    opacity: 0.8;
+    margin-bottom: 24px;
+  }
+
+  .hero-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(36px, 6vw, 72px);
+    font-weight: 500;
+    line-height: 1.15;
+    margin-bottom: 20px;
+  }
+
+  .hero-tagline {
+    font-family: 'Lora', Georgia, serif;
+    font-style: italic;
+    font-size: clamp(16px, 2.5vw, 22px);
+    opacity: 0.9;
+    margin-bottom: 32px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-details {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.7;
+  }
+
+  .hero-details span {
+    margin: 0 12px;
+  }
+
+  .gold-divider {
+    width: 80px;
+    height: 1px;
+    background: var(--warm-gold);
+    margin: 24px auto;
+  }
+
+  .gold-divider-wide {
+    width: 120px;
+    height: 1px;
+    background: var(--warm-gold);
+    margin: 0 auto;
+  }
+
+  /* SECTION STYLES */
+  .section {
+    padding: 80px 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-alt {
+    background: var(--off-white);
+  }
+
+  .section-dark {
+    background: var(--deep-forest);
+    color: var(--warm-cream);
+  }
+
+  .section-heading {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .section-heading h2 {
+    font-size: clamp(28px, 4vw, 42px);
+    color: var(--deep-forest);
+    margin-bottom: 12px;
+  }
+
+  .section-dark .section-heading h2 {
+    color: var(--warm-cream);
+  }
+
+  .section-heading p {
+    font-style: italic;
+    color: var(--terracotta);
+    font-size: 18px;
+  }
+
+  /* DAY CARDS */
+  .day-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin-bottom: 0;
+    min-height: 550px;
+  }
+
+  .day-card.reverse {
+    direction: rtl;
+  }
+
+  .day-card.reverse > * {
+    direction: ltr;
+  }
+
+  .day-image {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .day-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    display: block;
+  }
+
+  .day-number {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 120px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.15);
+    line-height: 1;
+  }
+
+  .day-content {
+    padding: 60px 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .day-date {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 8px;
+  }
+
+  .day-title {
+    font-size: 32px;
+    color: var(--deep-forest);
+    margin-bottom: 8px;
+  }
+
+  .day-subtitle {
+    font-style: italic;
+    color: var(--warm-gold);
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
+
+  .day-schedule {
+    list-style: none;
+    padding: 0;
+  }
+
+  .day-schedule li {
+    padding: 8px 0;
+    padding-left: 20px;
+    position: relative;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .day-schedule li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 15px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--warm-gold);
+  }
+
+  .day-highlight {
+    background: var(--terracotta-light);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-style: italic;
+  }
+
+  /* ALTERNATING DAY BACKGROUNDS */
+  .day-card:nth-child(odd) .day-content {
+    background: var(--light-cream);
+  }
+
+  .day-card:nth-child(even) .day-content {
+    background: var(--off-white);
+  }
+
+  /* INCLUDED SECTION */
+  .included-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .included-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .included-list li {
+    padding: 10px 0;
+    padding-left: 24px;
+    position: relative;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(201, 169, 110, 0.2);
+  }
+
+  .included-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 17px;
+    width: 8px;
+    height: 8px;
+    border: 1px solid var(--warm-gold);
+    border-radius: 50%;
+  }
+
+  .included-list li:last-child {
+    border-bottom: none;
+  }
+
+  .not-included-list li::before {
+    border-color: var(--terracotta);
+    background: transparent;
+  }
+
+  .list-heading {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: var(--warm-cream);
+  }
+
+  /* FACILITATORS */
+  .facilitators {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    min-height: 700px;
+  }
+
+  .facilitators-image {
+    overflow: hidden;
+  }
+
+  .facilitators-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    display: block;
+  }
+
+  .facilitators-content {
+    padding: 60px 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--deep-forest);
+    color: var(--warm-cream);
+  }
+
+  .facilitators-content h2 {
+    font-size: 36px;
+    margin-bottom: 32px;
+  }
+
+  .facilitator-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 20px;
+    color: var(--warm-gold);
+    margin-bottom: 8px;
+  }
+
+  .facilitator-bio {
+    font-size: 15px;
+    margin-bottom: 24px;
+    opacity: 0.9;
+  }
+
+  .facilitator-together {
+    font-style: italic;
+    padding-top: 20px;
+    border-top: 1px solid rgba(201, 169, 110, 0.3);
+    font-size: 15px;
+    opacity: 0.9;
+  }
+
+  /* CONTACTS */
+  .contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .contact-card {
+    text-align: center;
+    padding: 32px 24px;
+    border: 1px solid rgba(201, 169, 110, 0.3);
+    border-radius: 8px;
+  }
+
+  .contact-card h4 {
+    font-size: 18px;
+    color: var(--deep-forest);
+    margin-bottom: 8px;
+  }
+
+  .contact-role {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 12px;
+  }
+
+  .contact-detail {
+    font-size: 14px;
+    color: var(--charcoal);
+    line-height: 1.8;
+  }
+
+  /* MEAL PLAN */
+  .meal-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+  }
+
+  .meal-table th {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--warm-cream);
+    background: var(--forest-green);
+    padding: 14px 16px;
+    text-align: left;
+  }
+
+  .meal-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid rgba(201, 169, 110, 0.15);
+    font-size: 14px;
+  }
+
+  .meal-table tr:nth-child(even) {
+    background: var(--off-white);
+  }
+
+  /* FOOTER */
+  .footer {
+    background: var(--deep-forest);
+    color: var(--warm-cream);
+    text-align: center;
+    padding: 48px 24px;
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+
+  .footer-entity {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.5;
+    margin-bottom: 16px;
+  }
+
+  .footer-note {
+    font-style: italic;
+    font-size: 14px;
+    opacity: 0.7;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  /* IMAGE BANNER */
+  .image-banner {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+  }
+
+  .image-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .day-card {
+      grid-template-columns: 1fr;
+      min-height: auto;
+    }
+
+    .day-card.reverse {
+      direction: ltr;
+    }
+
+    .day-image {
+      height: 300px;
+    }
+
+    .day-content {
+      padding: 40px 24px;
+    }
+
+    .day-number {
+      font-size: 80px;
+    }
+
+    .facilitators {
+      grid-template-columns: 1fr;
+    }
+
+    .facilitators-image {
+      height: 400px;
+    }
+
+    .facilitators-content {
+      padding: 40px 24px;
+    }
+
+    .included-grid {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    .contacts-grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .section {
+      padding: 48px 20px;
+    }
+  }
+
+  /* PRINT STYLES */
+  @media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .hero { height: auto; min-height: 300px; page-break-after: always; }
+    .hero video { display: none; }
+    .hero { background: var(--deep-forest); }
+    .day-card { page-break-inside: avoid; min-height: auto; }
+    .section { padding: 40px 24px; }
+    .no-print { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <video autoplay muted loop playsinline>
+    <source src="video/hero-web.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-brand">Spiritual Badass Academy</div>
+    <h1 class="hero-title">Bali Solstice Retreat</h1>
+    <div class="gold-divider"></div>
+    <p class="hero-tagline">"It's time to let go... and surrender to the becoming of YOU"</p>
+    <div class="hero-details">
+      <span>16 - 21 June 2026</span>
+      <span>&middot;</span>
+      <span>Ubud, Bali</span>
+    </div>
+  </div>
+</section>
+
+<!-- WELCOME -->
+<section class="section" style="text-align: center; max-width: 700px;">
+  <div class="gold-divider-wide"></div>
+  <br>
+  <h2 style="font-size: 32px; color: var(--deep-forest); margin-bottom: 20px;">Welcome Home</h2>
+  <p style="font-size: 17px; line-height: 1.9;">
+    For the next six days, this is your space to exhale. To let go of everything you've been carrying and give yourself permission to simply <em>be</em>. Bali has a way of cracking you open in the most beautiful way - and we are here to hold that space for you every step of the way.
+  </p>
+  <br>
+  <p style="font-size: 15px; color: var(--terracotta); font-style: italic;">
+    Villa Brindal, Petulu, Ubud, Bali
+  </p>
+  <br>
+  <div class="gold-divider-wide"></div>
+</section>
+
+<!-- DAY 1 -->
+<div class="day-card">
+  <div class="day-image">
+    <video controls preload="metadata" poster="images/kelly-garden.jpg" playsinline style="width: 100%; height: 100%; object-fit: cover; object-position: center 20%;">
+      <source src="video/reel-1-web.mp4" type="video/mp4">
+    </video>
+    <div class="day-number">01</div>
+  </div>
+  <div class="day-content">
+    <div class="day-date">Tuesday 16 June</div>
+    <h3 class="day-title">Arrive and Settle In</h3>
+    <div class="day-subtitle">"Welcome to your sanctuary"</div>
+    <ul class="day-schedule">
+      <li>Transfers to villa to arrive by 3pm. Access to trusted drivers afterwards to take you anywhere you need to go (at your own cost).</li>
+      <li>Unpack and settle into your room</li>
+      <li>Opening circle - set intentions for the journey</li>
+      <li>Welcome dinner at the villa</li>
+      <li>Group esoteric acupuncture session with Kane - grounding into the body, relaxing the mind</li>
+    </ul>
+  </div>
+</div>
+
+<!-- DAY 2 -->
+<div class="day-card reverse">
+  <div class="day-image">
+    <img src="images/bali-spa-flowers.jpg" alt="Spa flower bath">
+    <div class="day-number">02</div>
+  </div>
+  <div class="day-content">
+    <div class="day-date">Wednesday 17 June</div>
+    <h3 class="day-title">Open and Surrender</h3>
+    <div class="day-subtitle">"Meet your body where it's at"</div>
+    <ul class="day-schedule">
+      <li>Breakfast at villa</li>
+      <li>Prayers and meditation with Kelly</li>
+      <li>Morning spa experience at <span class="day-highlight">Sang Spa</span> - massage, body scrub, flower bath, facial, hair spa + lunch</li>
+      <li>Sound healing at <span class="day-highlight">Pyramids of Chi</span> with Kelly and Kane</li>
+      <li>Dinner at villa</li>
+      <li>First breathwork journey with Kane</li>
+    </ul>
+  </div>
+</div>
+
+<!-- DAY 3 -->
+<div class="day-card">
+  <div class="day-image">
+    <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover; object-position: center 20%;">
+      <source src="video/tirta-empul-web.mp4" type="video/mp4">
+    </video>
+    <div class="day-number">03</div>
+  </div>
+  <div class="day-content">
+    <div class="day-date">Thursday 18 June</div>
+    <h3 class="day-title">Sacred Waters</h3>
+    <div class="day-subtitle">"Surrender to the cleansing"</div>
+    <ul class="day-schedule">
+      <li>Breakfast at villa</li>
+      <li>Day trip to <span class="day-highlight">Tirta Empul</span> water temple</li>
+      <li>Rice terraces of Tegallalang</li>
+      <li>Lunch feast at <span class="day-highlight">Green Kubu</span> overlooking the rice fields</li>
+      <li>Afternoon shopping in Ubud</li>
+      <li>Dinner at villa</li>
+      <li>Heart-opening cacao ceremony with Kelly</li>
+    </ul>
+  </div>
+</div>
+
+<!-- DAY 4 -->
+<div class="day-card reverse">
+  <div class="day-image">
+    <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover;">
+      <source src="video/food-bali-web.mp4" type="video/mp4">
+    </video>
+    <div class="day-number">04</div>
+  </div>
+  <div class="day-content">
+    <div class="day-date">Friday 19 June</div>
+    <h3 class="day-title">Deep Healing</h3>
+    <div class="day-subtitle">"Give yourself permission to dream again"</div>
+    <ul class="day-schedule">
+      <li>Breakfast at villa</li>
+      <li>Healer Joko - group healing session</li>
+      <li><span class="day-highlight">Balinese cooking class</span> - learn to cook mie goreng, chicken satay, and lumpia (eat together after)</li>
+      <li>Free afternoon - explore Ubud, shop, or simply rest at the villa. <em>Massages and IV drips can be organised at the villa for those who wish.</em></li>
+      <li>Dinner at villa</li>
+      <li>Esoteric acupuncture and sound healing with Kelly and Kane</li>
+    </ul>
+  </div>
+</div>
+
+<!-- DAY 5 -->
+<div class="day-card">
+  <div class="day-image">
+    <img src="images/uluwatu-malini.jpg" alt="Malini clifftop dining, Uluwatu">
+    <div class="day-number">05</div>
+  </div>
+  <div class="day-content">
+    <div class="day-date">Saturday 20 June</div>
+    <h3 class="day-title">Adventure and Celebration</h3>
+    <div class="day-subtitle">"The body is the key"</div>
+    <ul class="day-schedule">
+      <li>Breakfast at villa</li>
+      <li>Day trip to <span class="day-highlight">Uluwatu</span> - temples, beaches, swim</li>
+      <li>Lunch in Uluwatu</li>
+      <li>Group massage and facial experience</li>
+      <li>Get dressed at spa facilities</li>
+      <li>Sunset celebration dinner at <span class="day-highlight">Malini</span> - seafood on the clifftops</li>
+      <li>Drive home together under the stars</li>
+    </ul>
+  </div>
+</div>
+
+<!-- DAY 6 -->
+<div class="day-card reverse">
+  <div class="day-image">
+    <video controls preload="metadata" poster="images/kelly-holding-space.jpg" playsinline style="width: 100%; height: 100%; object-fit: cover; object-position: center top;">
+      <source src="video/reel-2-web.mp4" type="video/mp4">
+    </video>
+    <div class="day-number">06</div>
+  </div>
+  <div class="day-content">
+    <div class="day-date">Sunday 21 June</div>
+    <h3 class="day-title">Closing the Space</h3>
+    <div class="day-subtitle">"You are not the same woman who arrived"</div>
+    <ul class="day-schedule">
+      <li>Pack up after breakfast</li>
+      <li>Final circle - reflections and prayers</li>
+      <li>Testimonials and goodbyes</li>
+      <li>Grab your departure lunch pack</li>
+      <li>Departure</li>
+    </ul>
+  </div>
+</div>
+
+<!-- CHEF JULIA SECTION -->
+<section class="section-alt" style="padding: 60px 24px;">
+  <div style="max-width: 800px; margin: 0 auto; display: grid; grid-template-columns: 300px 1fr; gap: 40px; align-items: center;">
+    <div style="overflow: hidden; border-radius: 8px; height: 380px;">
+      <img src="images/chef-julia.jpg" alt="Kelly and Chef Julia" style="width: 100%; height: 100%; object-fit: cover; object-position: center 20%;">
+    </div>
+    <div>
+      <div style="font-family: 'Inter', sans-serif; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #C4663A; margin-bottom: 8px;">Your Chef</div>
+      <h3 style="font-family: 'Playfair Display', Georgia, serif; font-size: 28px; color: #1E3329; margin-bottom: 16px;">Chef Julia</h3>
+      <p style="font-size: 15px; line-height: 1.9; color: #2C2C2C; margin-bottom: 16px;">
+        Julia was our chef on the 2025 Bali retreat and her food was so incredible we had to bring her back. She cooks with love, caters for every dietary need, and turns every meal into something you'll be talking about long after you get home.
+      </p>
+      <p style="font-size: 15px; line-height: 1.9; color: #2C2C2C; margin-bottom: 16px;">
+        From beautiful breakfasts to her famous lasagna and nasi campur, Julia will keep you nourished and spoiled the entire retreat. She'll also be running your Balinese cooking class - teaching you to make mie goreng, chicken satay, and lumpia from scratch.
+      </p>
+      <p style="font-style: italic; font-size: 15px; color: #C9A96E;">
+        Every meal is made with intention, fresh local ingredients, and a whole lot of heart.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOD + IV VIDEOS -->
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0;">
+  <div style="overflow: hidden; height: 350px;">
+    <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover;">
+      <source src="video/food-bali-web.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div style="overflow: hidden; height: 350px;">
+    <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover;">
+      <source src="video/iv-drips-web.mp4" type="video/mp4">
+    </video>
+  </div>
+</div>
+
+<!-- WHAT'S INCLUDED -->
+<section class="section-dark" style="padding: 80px 24px;">
+  <div style="max-width: 1100px; margin: 0 auto;">
+    <div class="section-heading">
+      <h2>What's Included</h2>
+      <div class="gold-divider"></div>
+    </div>
+    <div class="included-grid">
+      <div>
+        <div class="list-heading">Included in Your Investment</div>
+        <ul class="included-list">
+          <li>6 days, 5 nights accommodation at Villa Brindal</li>
+          <li>All villa meals catered by gourmet onsite chef</li>
+          <li>Transfers to villa on arrival</li>
+          <li>Access to trusted local drivers throughout the retreat</li>
+          <li>2 day trips - Tirta Empul and Uluwatu</li>
+          <li>Sound Healing at the Pyramids of Chi with Kelly and Kane</li>
+          <li>2 breathwork sessions with Kane</li>
+          <li>Cacao ceremony</li>
+          <li>2 esoteric acupuncture sessions with Kane</li>
+          <li>4-hour spa experience</li>
+          <li>Group massage and facial experience in Uluwatu</li>
+          <li>Balinese cooking class</li>
+          <li>Healer Joko group healing session</li>
+          <li>24-hour access to Kelly and Kane</li>
+        </ul>
+      </div>
+      <div>
+        <div class="list-heading">Not Included</div>
+        <ul class="included-list not-included-list">
+          <li>International flights</li>
+          <li>Travel insurance</li>
+          <li>Visa on Arrival (500,000 IDR / ~$50 AUD)</li>
+          <li>Bali Tourist Levy</li>
+          <li>Personal spending money</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FACILITATORS -->
+<div class="facilitators" style="min-height: 900px;">
+  <div class="facilitators-image" style="min-height: 900px;">
+    <img src="images/kelly-kane-bamboo.jpg" alt="Kelly and Kane" style="object-fit: cover !important; object-position: center top !important;">
+  </div>
+  <div class="facilitators-content">
+    <h2>Your Facilitators</h2>
+    <div class="facilitator-name">Kelly Wotherspoon-Rawle</div>
+    <p class="facilitator-bio">Naturopath, spiritual teacher, and sound healer with 10+ years in clinical practice. Kelly teaches wellness in body, mind and spirit - guiding women through astrology, tarot, Human Design, somatic healing, prayer, meditation, and ceremony. She holds space with drum, flute, and voice. First and foremost a teacher, a way-shower.</p>
+    <div class="facilitator-name">Kane Rawle</div>
+    <p class="facilitator-bio">Multi-modality facilitator providing group esoteric acupuncture, breathwork, and sound healing. Kane works with didgeridoo, singing bowls, and vibratory energy to guide deep somatic release. He came into his healing ability during a profound personal transformation and brings a grounded, powerful presence to every session.</p>
+    <p class="facilitator-together">Together they create a safe container - through sound, ceremony, and deep healing work - for guests to fully unravel and gain the clarity and drive to move forward.</p>
+  </div>
+</div>
+
+<!-- DIVIDER -->
+<div style="padding: 40px 0; text-align: center; background: var(--off-white);">
+  <div style="width: 120px; height: 1px; background: var(--warm-gold); margin: 0 auto;"></div>
+</div>
+
+<!-- IMPORTANT CONTACTS -->
+<section class="section">
+  <div class="section-heading">
+    <h2>Important Contacts</h2>
+    <div class="gold-divider"></div>
+    <p>Save these numbers - you'll need them in Bali</p>
+  </div>
+  <div class="contacts-grid">
+    <div class="contact-card">
+      <h4>Kelly</h4>
+      <div class="contact-role">Facilitator</div>
+      <div class="contact-detail">
+        +61 402 223 805<br>
+        <em>WhatsApp</em>
+      </div>
+    </div>
+    <div class="contact-card">
+      <h4>Kane</h4>
+      <div class="contact-role">Facilitator</div>
+      <div class="contact-detail">
+        +61 402 755 455<br>
+        <em>WhatsApp</em>
+      </div>
+    </div>
+    <div class="contact-card">
+      <h4>Putu</h4>
+      <div class="contact-role">Main Driver</div>
+      <div class="contact-detail">
+        +62 819-3610-0900<br>
+        <em>WhatsApp</em>
+      </div>
+    </div>
+    <div class="contact-card">
+      <h4>Nyoman</h4>
+      <div class="contact-role">Ubud Driver</div>
+      <div class="contact-detail">
+        +62 878-6208-0057<br>
+        <em>WhatsApp</em>
+      </div>
+    </div>
+    <div class="contact-card">
+      <h4>Villa Brindal</h4>
+      <div class="contact-role">Accommodation</div>
+      <div class="contact-detail">
+        G75F+7Q9, Petulu<br>
+        Ubud, Gianyar Regency<br>
+        Bali 80571
+      </div>
+    </div>
+    <div class="contact-card">
+      <h4>Emergency</h4>
+      <div class="contact-role">Bali Emergency Services</div>
+      <div class="contact-detail">
+        Ambulance: 118<br>
+        Police: 110<br>
+        Fire: 113
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRE-TRIP CHECKLIST -->
+<section class="section-alt" style="padding: 80px 24px;">
+  <div style="max-width: 700px; margin: 0 auto;">
+    <div class="section-heading">
+      <h2 style="color: var(--deep-forest);">Before You Fly</h2>
+      <div class="gold-divider"></div>
+    </div>
+    <table class="meal-table">
+      <tr>
+        <th style="width: 35%;">Item</th>
+        <th>Details</th>
+      </tr>
+      <tr>
+        <td style="font-weight: 500;">Passport</td>
+        <td>Must be valid until at least 21 December 2026 (6 months beyond entry)</td>
+      </tr>
+      <tr>
+        <td style="font-weight: 500;">Visa on Arrival</td>
+        <td>Apply online before you fly at <a href="https://evisa.imigrasi.go.id/web/visa-selection" style="color: #C4663A;">evisa.imigrasi.go.id</a> - select the B1 30-day Tourist on Arrival visa. 500,000 IDR (~$50 AUD). Have your return flight details ready.</td>
+      </tr>
+      <tr>
+        <td style="font-weight: 500;">Bali Tourist Levy</td>
+        <td>150,000 IDR (~$15 AUD) per person. Pay at the airport kiosks on arrival (cashless - card only). Kelly will walk you through this.</td>
+      </tr>
+      <tr>
+        <td style="font-weight: 500;">Arrival Card</td>
+        <td>Fill out your Indonesian Arrival Card online before you land at <a href="https://allindonesia.imigrasi.go.id" style="color: #C4663A;">allindonesia.imigrasi.go.id</a></td>
+      </tr>
+      <tr>
+        <td style="font-weight: 500;">Travel Insurance</td>
+        <td>Strongly recommended - cover medical, evacuation, and cancellation.</td>
+      </tr>
+      <tr>
+        <td style="font-weight: 500;">Spending Money</td>
+        <td>We recommend bringing ~$200 AUD in cash to exchange on arrival. Use reputable money changers only - BMC in Ubud is our go-to. Most places accept card except markets.</td>
+      </tr>
+      <tr>
+        <td style="font-weight: 500;">WhatsApp</td>
+        <td>WhatsApp is the main communication tool in Bali - you will need it. Make sure it's installed and working on your phone before you fly. All drivers, restaurants, and local contacts use WhatsApp. Join our group chat: <a href="https://chat.whatsapp.com/HFe6kOwupWfLpTJAOAnjRS?mlu=0&s=cl&p=i" style="color: #C4663A;">Bali Crew 2026</a></td>
+      </tr>
+      <tr>
+        <td style="font-weight: 500;">Dietary Requirements</td>
+        <td>Let Kelly know ASAP so the chef can prepare.</td>
+      </tr>
+    </table>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-brand">Spiritual Badass Academy</div>
+  <div class="footer-entity">Peace of Eden Pty Ltd</div>
+  <div class="gold-divider"></div>
+  <br>
+  <p class="footer-note">
+    "This retreat has been designed to give you deep rest, deep activation, and the kind of connection that changes everything."
+  </p>
+  <br>
+  <p style="font-size: 13px; opacity: 0.4;">See you in Ubud.</p>
+</footer>
+
+</body>
+</html>
