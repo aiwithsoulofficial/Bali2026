@@ -503,7 +503,21 @@
     }
 
     .day-image {
-      height: 300px;
+      height: auto;
+      min-height: 300px;
+    }
+
+    .day-image video {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .day-image img {
+      width: 100%;
+      height: auto;
+      min-height: 300px;
+      object-fit: cover;
     }
 
     .day-content {
@@ -516,10 +530,12 @@
 
     .facilitators {
       grid-template-columns: 1fr;
+      min-height: auto !important;
     }
 
     .facilitators-image {
-      height: 400px;
+      height: auto;
+      min-height: 350px;
     }
 
     .facilitators-content {
@@ -534,6 +550,17 @@
     .contacts-grid {
       grid-template-columns: 1fr;
       gap: 16px;
+    }
+
+    /* Chef Julia section mobile */
+    [style*="grid-template-columns: 300px"] {
+      grid-template-columns: 1fr !important;
+      gap: 24px !important;
+    }
+
+    /* Video banners mobile */
+    [style*="grid-template-columns: 1fr 1fr"] {
+      grid-template-columns: 1fr !important;
     }
 
     .section {
